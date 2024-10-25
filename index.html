@@ -4,15 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>SmallWeatherApp</title>
 </head>
 
 <body>
     <main>
+        <div class="title">
+            <h1>SWA <i class="uil uil-smile-squint-wink-alt"></i></h1>
+            <div>
+                <h3>Small Weather App</h3>
+                <p>Search for a city and get the weather information.</p>
+            </div>
+        </div>
+        <form>
+            <input type="text" autocomplete="off" id="valueSearch" placeholder="Enter a city">
+            <button><i class="uil uil-search"></i></button>
+        </form>
 
+        <section class="result">
+            <figure>
+                <figcaption class="name" id="city">London</figcaption>
+                <img src="https://flagsapi.com/GB/shiny/32.png" id="flag" alt="flag">
+            </figure>
+            <figure class="temperature" id="temperature">
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="temperature">
+                <figcaption>
+                    <span>31</span> <sup>°</sup>
+                </figcaption>
+            </figure>
+            <p class="description">
+                Overcast clouds
+            </p>
+
+            <ul>
+                <li>
+                    <span>Clouds</span>
+                    <i class="uil uil-clouds"></i>
+                    <span id="clouds">98</span>%
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <i class="uil uil-tear"></i>
+                    <span id="humidity">80</span>%
+                </li>
+                <li>
+                    <span>Pressure</span>
+                    <i class="uil uil-tachometer-fast"></i>
+                    <span id="pressure">1000</span>hPa
+                </li>
+            </ul>
+        </section>
     </main>
-
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
