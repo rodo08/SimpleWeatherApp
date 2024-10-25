@@ -54,6 +54,13 @@ main form i {
 main .result {
   padding-top: 20px;
   text-align: center;
+  figure:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    gap: 10px;
+  }
 }
 
 main .result .name {
@@ -145,5 +152,26 @@ figcaption {
 
   h3 {
     color: #bde1eb;
+  }
+}
+
+main.error {
+  animation: errorEffect 0.3s linear 1;
+}
+@keyframes errorEffect {
+  0% {
+    transform: translate(10px, 5px);
+  }
+  25% {
+    transform: translate(5px, 0);
+  }
+  50% {
+    transform: translate(8px, 2px);
+  }
+  75% {
+    transform: translate(-2px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

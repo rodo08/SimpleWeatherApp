@@ -12,6 +12,7 @@ let clouds = document.querySelector("#clouds");
 let humidity = document.querySelector("#humidity");
 let pressure = document.querySelector("#pressure");
 let form = document.querySelector("form");
+let main = document.querySelector("main");
 
 let id = "8ec85e82a3e1b87e3fe0cb82dc7482dc";
 let url = `https://api.openweathermap.org/data/2.5/weather?units=metric&appid=${id}&q=`;
@@ -58,7 +59,21 @@ const searchWeather = async () => {
 
       pressure.textContent = data.main.pressure;
     }
+
+    valueSearch.value = "";
   } catch (error) {
     console.log(error);
+    main.classList.add("error");
+    setTimeout(() => {
+      main.classList.remove("error");
+    }, 1000);
   }
+  valueSearch.value = "";
 };
+
+const initApp = () => {
+  valueSearch.value = "Quilicura";
+  searchWeather();
+};
+
+initApp();
