@@ -19,7 +19,7 @@ main {
   width: 300px;
   min-height: max-content;
   min-height: 300px;
-  background-color: #f7f7f7;
+  background-color: #003733;
   border-radius: 30px;
   box-shadow: 0 10px 20px;
   padding: 30px;
@@ -27,10 +27,14 @@ main {
 }
 
 main form {
-  border: 1px solid #5553;
+  border: 1px solid rgb(120, 126, 139);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+input {
+  color: #fff;
 }
 
 main form input,
@@ -42,5 +46,104 @@ main form button {
 }
 
 main form i {
+  color: #fff;
   opacity: 0.7;
+  cursor: pointer;
+}
+
+main .result {
+  padding-top: 20px;
+  text-align: center;
+}
+
+main .result .name {
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+main .temperature {
+  width: 150px;
+  margin: 0 auto;
+  filter: drop-shadow(0 10px 50px #f9f7ca);
+}
+
+main .temperature figcaption {
+  font-size: 3em;
+}
+
+main .description {
+  color: #fff;
+  padding: 10px 0 30px;
+  font-style: oblique;
+}
+
+main ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+main li {
+  background-color: #f0a61a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 10px;
+  background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+  font-weight: bold;
+  font-size: small;
+}
+
+main li i {
+  font-size: 2em;
+  display: block !important;
+  margin: 20px 0;
+}
+
+main li:nth-child(2) {
+  background-color: #e23b9a;
+}
+
+main li:nth-child(3) {
+  background-color: #4463ba;
+}
+
+figcaption {
+  color: #ffffff;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    p {
+      width: 100%;
+      text-align: center;
+      color: #a4a4a4;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #ffffff;
+  }
+
+  h3 {
+    color: #bde1eb;
+  }
 }
